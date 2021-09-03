@@ -9,7 +9,7 @@ class ModelName(str, Enum):
     resnet = "resnet"
     lenet = "lenet"
 
-
+# path param here is model_name
 @app.get("/models/{model_name}")
 async def get_model(model_name: ModelName):
     if model_name == ModelName.alexnet:
